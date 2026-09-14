@@ -29,7 +29,9 @@ export function Navbar() {
     } else {
       document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
   return (
@@ -47,7 +49,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center gap-2.5">
           <div className="overflow-hidden rounded-xl shadow-sm">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Flinck"
               width={36}
               height={36}

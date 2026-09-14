@@ -37,7 +37,7 @@ export function SiteHeader() {
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
           <div className="shrink-0 overflow-hidden rounded-xl border border-slate-900/8 bg-white shadow-[0_12px_30px_rgba(22,61,42,0.12)] sm:rounded-2xl">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Flinck logo"
               width={44}
               height={44}
@@ -126,13 +126,13 @@ export function SiteHeader() {
                   type="button"
                   onClick={closeMenu}
                   aria-label="Close site menu"
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-[#f7f2e8] text-slate-900"
-              >
-                <span className="relative h-5 w-5" aria-hidden="true">
-                  <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 rotate-45 rounded-full bg-current" />
-                  <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 -rotate-45 rounded-full bg-current" />
-                </span>
-              </button>
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-900/8 bg-[#f7f2e8] text-slate-900"
+                >
+                  <span className="relative h-5 w-5" aria-hidden="true">
+                    <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 rotate-45 rounded-full bg-current" />
+                    <span className="absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 -rotate-45 rounded-full bg-current" />
+                  </span>
+                </button>
               </div>
               <div className="mt-5 grid gap-2">
                 {navLinks.map((link) => (
