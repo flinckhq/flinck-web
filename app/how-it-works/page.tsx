@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     description:
       "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and ecosystem sponsorships.",
     url: `${SITE_URL}/how-it-works`,
-    images: [{ url: `${SITE_URL}/workflow-visual.png`, alt: "Flinck platform workflow" }],
+    images: [{ url: "/flinck-og-image.png", alt: "Flinck platform workflow" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "How it works | Flinck",
     description:
       "How Flinck connects the agricultural value chain—from social discovery and listings to negotiation, trust, and ecosystem sponsorships.",
-    images: [`${SITE_URL}/workflow-visual.png`],
+    images: ["/flinck-og-image.png"],
   },
 };
 
@@ -118,7 +118,9 @@ export default function HowItWorksPage() {
                     className="rounded-[2rem] border border-slate-900/8 bg-white/90 p-6"
                   >
                     <Icon className="h-6 w-6 text-[#163d2a]" />
-                    <h3 className="mt-4 text-lg font-semibold">{pillar.title}</h3>
+                    <h3 className="mt-4 text-lg font-semibold">
+                      {pillar.title}
+                    </h3>
                     <p className="mt-2 text-sm text-slate-600">
                       {pillar.description}
                     </p>

@@ -16,14 +16,16 @@ export const metadata: Metadata = {
     description:
       "Read the Flinck terms and conditions of use. Learn about user accounts, marketplace transactions, fees, wallet guidelines, and liability policies.",
     url: `${SITE_URL}/terms`,
-    images: [{ url: `${SITE_URL}/trust-badge.png`, alt: "Flinck Terms and Conditions" }],
+    images: [
+      { url: "/flinck-og-image.png", alt: "Flinck Terms and Conditions" },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Terms and Conditions | Flinck",
     description:
       "Read the Flinck terms and conditions of use. Learn about user accounts, marketplace transactions, fees, wallet guidelines, and liability policies.",
-    images: [`${SITE_URL}/trust-badge.png`],
+    images: ["/flinck-og-image.png"],
   },
 };
 
@@ -157,7 +159,9 @@ export default function TermsPage() {
                   Terms and Conditions
                 </h1>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
-                  These Terms and Conditions govern your access to and use of the Flinck mobile application, website, and digital services. Please read them carefully before using our platform.
+                  These Terms and Conditions govern your access to and use of
+                  the Flinck mobile application, website, and digital services.
+                  Please read them carefully before using our platform.
                 </p>
               </div>
 
@@ -165,9 +169,7 @@ export default function TermsPage() {
                 <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
                   Last updated
                 </p>
-                <p className="mt-2 font-medium text-slate-950">
-                  May 22, 2026
-                </p>
+                <p className="mt-2 font-medium text-slate-950">May 22, 2026</p>
               </div>
             </div>
 

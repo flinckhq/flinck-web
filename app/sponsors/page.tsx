@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  Mail,
-  Building2,
-  Landmark,
-  Heart,
-  Award,
-} from "lucide-react";
+import { Mail, Building2, Landmark, Heart, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/page-shell";
 import { SPONSOR_EMAIL, SITE_URL } from "@/lib/site-content";
@@ -21,14 +15,14 @@ export const metadata: Metadata = {
     description:
       "Sponsor Flinck and support the open digital infrastructure for smallholder farmers. We work with leading global organizations, banks, and agribusinesses.",
     url: `${SITE_URL}/sponsors`,
-    images: [{ url: `${SITE_URL}/platform-dashboard.png`, alt: "Flinck Sponsors" }],
+    images: [{ url: "/flinck-og-image.png", alt: "Flinck Sponsors" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sponsors | Flinck",
     description:
       "Sponsor Flinck and support the open digital infrastructure for smallholder farmers. We work with leading global organizations, banks, and agribusinesses.",
-    images: [`${SITE_URL}/platform-dashboard.png`],
+    images: ["/flinck-og-image.png"],
   },
 };
 
@@ -75,7 +69,10 @@ export default function SponsorsPage() {
               Sponsor the open digital infrastructure for agriculture.
             </h1>
             <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-slate-600 sm:mt-8 sm:text-xl sm:leading-8">
-              Flinck empowers smallholder farmers with open access to local weather intelligence, direct-to-buyer marketplaces, and verified trade identities. We do not sell user data. Instead, we rely on sponsors to fund our ecosystem's growth.
+              Flinck empowers smallholder farmers with open access to local
+              weather intelligence, direct-to-buyer marketplaces, and verified
+              trade identities. We do not sell user data. Instead, we rely on
+              sponsors to fund our ecosystem's growth.
             </p>
           </div>
 
@@ -110,18 +107,24 @@ export default function SponsorsPage() {
             </div>
 
             <div className="relative z-10 mx-auto max-w-2xl">
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Become a Sponsor</h2>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Become a Sponsor
+              </h2>
               <p className="mt-5 text-base leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8">
-                Your support directly finances localized crop intelligence models, offline-first app engineering, and fee-free trade access for thousands of farming communities.
+                Your support directly finances localized crop intelligence
+                models, offline-first app engineering, and fee-free trade access
+                for thousands of farming communities.
               </p>
-              
+
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:mt-10 sm:flex-row">
                 <Button
                   asChild
                   size="lg"
                   className="h-[3.25rem] w-full rounded-full bg-[#d6f277] px-6 text-base font-semibold text-slate-950 shadow-lg hover:bg-[#c9eb61] sm:h-16 sm:w-auto sm:px-10 sm:text-lg"
                 >
-                  <a href={`mailto:${SPONSOR_EMAIL}?subject=Flinck%20Sponsorship%20Inquiry`}>
+                  <a
+                    href={`mailto:${SPONSOR_EMAIL}?subject=Flinck%20Sponsorship%20Inquiry`}
+                  >
                     Sponsor Flinck
                   </a>
                 </Button>
@@ -138,8 +141,8 @@ export default function SponsorsPage() {
               Download the Flinck App
             </Link>{" "}
             or view our{" "}
-            <Link 
-              href="/how-it-works" 
+            <Link
+              href="/how-it-works"
               className="font-medium text-[#163d2a] hover:text-[#256041] transition-colors underline decoration-2 underline-offset-4"
             >
               system workflow

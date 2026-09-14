@@ -4,11 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageShell } from "@/components/page-shell";
-import {
-  getAllAudienceSlugs,
-  getAudience,
-  SITE_URL,
-} from "@/lib/site-content";
+import { getAllAudienceSlugs, getAudience, SITE_URL } from "@/lib/site-content";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,11 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const audience = getAudience(slug);
   if (!audience) return { title: "Not found" };
 
-  let imagePath = "/platform-dashboard.png";
-  if (slug === "farmers") imagePath = "/farmer-lifestyle.png";
-  else if (slug === "buyers" || slug === "businesses") imagePath = "/marketplace-vibe.png";
-
-  const imageUrl = `${SITE_URL}${imagePath}`;
+  const imageUrl = "/flinck-og-image.png";
 
   // SEO optimizations
   let seoTitle = `${audience.title} | Flinck Agricultural Marketplace`;
@@ -33,13 +25,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (slug === "farmers") {
     seoTitle = "Where Can I Sell My Farm Produce Online? | Flinck for Farmers";
-    seoDescription = "Are you a farmer wondering: where can I sell my farm produce online? Join Flinck, the leading agricultural marketplace, and sell directly to buyers with zero middleman fees.";
+    seoDescription =
+      "Are you a farmer wondering: where can I sell my farm produce online? Join Flinck, the leading agricultural marketplace, and sell directly to buyers with zero middleman fees.";
   } else if (slug === "buyers") {
     seoTitle = "Where Can I Buy Farm Produce Direct? | Flinck for Buyers";
-    seoDescription = "Wondering where to buy agricultural products and fresh farm produce direct from local farmers? Flinck offers progress-verified digital commerce.";
+    seoDescription =
+      "Wondering where to buy agricultural products and fresh farm produce direct from local farmers? Flinck offers progress-verified digital commerce.";
   } else if (slug === "businesses") {
-    seoTitle = "Wholesale Agricultural Marketplace | Procure Farm Produce at Scale";
-    seoDescription = "Access high-quality agricultural goods and crops from verified operators. Streamline your agribusiness and food manufacturing supply chain with Flinck.";
+    seoTitle =
+      "Wholesale Agricultural Marketplace | Procure Farm Produce at Scale";
+    seoDescription =
+      "Access high-quality agricultural goods and crops from verified operators. Streamline your agribusiness and food manufacturing supply chain with Flinck.";
   }
 
   return {
@@ -109,11 +105,7 @@ export default async function AudiencePage({ params }: Props) {
               className="h-[3.25rem] w-full rounded-full bg-[#163d2a] px-6 text-white hover:bg-[#10281d] sm:h-14 sm:w-auto sm:px-8"
             >
               {isExternal ? (
-                <a
-                  href={audience.ctaHref}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={audience.ctaHref} target="_blank" rel="noreferrer">
                   {audience.ctaLabel}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>

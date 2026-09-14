@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     siteName: "Flinck",
     images: [
       {
-        url: "/logo.png",
+        url: "/flinck-og-image.png",
         width: 1200,
         height: 630,
         alt: "Flinck Agricultural Social Network for Farmers",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
       "Flinck – The Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
       "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly.",
-    images: ["/farmer-lifestyle.png"],
+    images: ["/flinck-og-image.png"],
   },
   robots: {
     index: true,
