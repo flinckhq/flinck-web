@@ -4,11 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { PageShell } from "@/components/page-shell";
-import {
-  getAllBlogSlugs,
-  getBlogPost,
-  getAllBlogPosts,
-} from "@/lib/blog";
+import { getAllBlogSlugs, getBlogPost, getAllBlogPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site-content";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -22,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPost(slug);
   if (!post) return { title: "Post not found" };
 
-  const imageUrl = post.coverImage ? `${SITE_URL}${post.coverImage}` : `${SITE_URL}/farmer-lifestyle.png`;
+  const imageUrl = "/flinck-og-image.png";
 
   return {
     title: post.title,

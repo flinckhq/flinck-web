@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     description:
       "News and insights from Flinck on agricultural marketplaces, trust, sponsorships, and the future of ag trade in Africa.",
     url: `${SITE_URL}/blog`,
-    images: [{ url: `${SITE_URL}/farmer-lifestyle.png`, alt: "Flinck Blog" }],
+    images: [{ url: "/flinck-og-image.png", alt: "Flinck Blog" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog | Flinck",
     description:
       "News and insights from Flinck on agricultural marketplaces, trust, sponsorships, and the future of ag trade in Africa.",
-    images: [`${SITE_URL}/farmer-lifestyle.png`],
+    images: ["/flinck-og-image.png"],
   },
 };
 

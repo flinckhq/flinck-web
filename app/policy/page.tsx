@@ -13,14 +13,14 @@ export const metadata: Metadata = {
     description:
       "Read the Flinck privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
     url: `${SITE_URL}/policy`,
-    images: [{ url: `${SITE_URL}/trust-badge.png`, alt: "Flinck Privacy Policy" }],
+    images: [{ url: "/flinck-og-image.png", alt: "Flinck Privacy Policy" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Flinck",
     description:
       "Read the Flinck privacy policy covering account information, permissions, payments, notifications, security, retention and user rights.",
-    images: [`${SITE_URL}/trust-badge.png`],
+    images: ["/flinck-og-image.png"],
   },
 };
 
