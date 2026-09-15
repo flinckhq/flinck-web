@@ -17,12 +17,12 @@ const faqItems = [
   {
     question: "Is flinck only a marketplace?",
     answer:
-      "No. It is a social marketplace: community and discovery plus listings, negotiation, payments, and sponsorship paths for institutions.",
+      "No. It is a complete agricultural social ecosystem: community sharing, precision weather guidance, AI diagnostics, direct produce listings, and verified trade coordination.",
   },
   {
-    question: "How to sponsor?",
+    question: "How do payments and delivery work?",
     answer:
-      "Visit our Sponsors page or email sponsor@flinck.app. We scope data sharing, compliance, and rollout geography before any integration.",
+      "Buyers and farmers connect and confirm pricing directly on the app. Logistics partners handle harvest pickup and deliver directly to the buyer safely with end-to-end status tracking.",
   },
   {
     question: "Is app available on iOS?",

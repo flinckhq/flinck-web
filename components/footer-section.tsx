@@ -1,21 +1,30 @@
+import Image from "next/image";
 import Link from "next/link";
-import { PLAY_STORE_URL, SPONSOR_EMAIL } from "@/lib/site-content";
+import { PLAY_STORE_URL } from "@/lib/site-content";
 
 export function FooterSection() {
   return (
     <footer className="relative overflow-hidden bg-[#1E4A38] pt-16 pb-6 text-white sm:pt-20 sm:pb-10">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         {/* Top Grid */}
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr_1fr]">
           {/* Brand Info */}
           <div>
-            <Link href="/" className="inline-block">
-              <span className="text-xl font-black tracking-tight text-white">
-                FLINCK
+            <Link href="/" className="inline-flex items-center gap-2.5">
+              <Image
+                src="/logo.png"
+                alt="Flinck"
+                width={32}
+                height={32}
+                className="h-8 w-8 rounded-lg object-contain"
+              />
+              <span className="text-xl font-bold tracking-tight text-white font-['Cabinet_Grotesk',sans-serif]">
+                flinck
               </span>
             </Link>
-            <p className="mt-4 max-w-xs text-xs sm:text-sm leading-relaxed text-[#F2EAE0]/75 font-medium">
-              Connecting the people who grow, buy and move agriculture
+            <p className="mt-4 max-w-xs text-xs sm:text-sm leading-relaxed text-[#F2EAE0]/75 font-normal">
+              Connecting the people who grow, buy and move agriculture across
+              Africa.
             </p>
           </div>
 
@@ -53,7 +62,7 @@ export function FooterSection() {
               </li>
               <li>
                 <Link href="#features" className="hover:text-white transition">
-                  AI assistant
+                  AI Assistant
                 </Link>
               </li>
             </ul>
@@ -67,7 +76,7 @@ export function FooterSection() {
             <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-[#F2EAE0]/70 font-medium">
               <li>
                 <Link
-                  href="/for/farmers"
+                  href="#how-it-works"
                   className="hover:text-white transition"
                 >
                   Farmers
@@ -75,7 +84,7 @@ export function FooterSection() {
               </li>
               <li>
                 <Link
-                  href="/for/buyers"
+                  href="#how-it-works"
                   className="hover:text-white transition"
                 >
                   Buyers
@@ -83,10 +92,10 @@ export function FooterSection() {
               </li>
               <li>
                 <Link
-                  href="/for/businesses"
+                  href="#how-it-works"
                   className="hover:text-white transition"
                 >
-                  Logistics partners
+                  Logistics Partners
                 </Link>
               </li>
               <li>
@@ -96,7 +105,7 @@ export function FooterSection() {
                   rel="noreferrer"
                   className="hover:text-white transition"
                 >
-                  Get Started
+                  Download App
                 </a>
               </li>
             </ul>
@@ -110,10 +119,18 @@ export function FooterSection() {
             <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-[#F2EAE0]/70 font-medium">
               <li>
                 <Link
-                  href="/how-it-works"
+                  href="#how-it-works"
                   className="hover:text-white transition"
                 >
                   About Flinck
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#testimonials"
+                  className="hover:text-white transition"
+                >
+                  Testimonials
                 </Link>
               </li>
               <li>
@@ -123,34 +140,21 @@ export function FooterSection() {
               </li>
               <li>
                 <a
-                  href={`mailto:${SPONSOR_EMAIL}`}
+                  href="mailto:hello@flinck.app"
                   className="hover:text-white transition"
                 >
                   Contact Us
                 </a>
               </li>
-              <li>
-                <Link href="/sponsors" className="hover:text-white transition">
-                  Careers
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* Support Column */}
+          {/* Legal Column */}
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-white">
-              SUPPORT
+              LEGAL
             </p>
             <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-[#F2EAE0]/70 font-medium">
-              <li>
-                <a
-                  href={`mailto:${SPONSOR_EMAIL}`}
-                  className="hover:text-white transition"
-                >
-                  Help Center
-                </a>
-              </li>
               <li>
                 <Link href="/policy" className="hover:text-white transition">
                   Privacy Policy
@@ -162,9 +166,14 @@ export function FooterSection() {
                 </Link>
               </li>
               <li>
-                <Link href="/policy" className="hover:text-white transition">
-                  Cookie Policy
-                </Link>
+                <a
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-white transition font-bold text-[#F2EAE0]"
+                >
+                  Google Play Store ↗
+                </a>
               </li>
             </ul>
           </div>
@@ -172,7 +181,7 @@ export function FooterSection() {
 
         {/* Copyright */}
         <div className="mt-14 border-t border-white/10 pt-6">
-          <p className="text-xs text-[#F2EAE0]/60">
+          <p className="text-xs text-[#F2EAE0]/60 font-medium">
             © {new Date().getFullYear()} Flinck. All rights reserved.
           </p>
         </div>
