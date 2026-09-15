@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "8000+", label: "Products" },
-  { value: "5+", label: "Community" },
-  { value: "5+", label: "Community" },
+  { value: "14+", label: "Countries" },
+  { value: "1000+", label: "Community" },
 ];
 
 export function StatsStrip() {
