@@ -20,7 +20,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Cabinet Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --font-cabinet: 'Cabinet Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Cabinet Grotesk', system-ui, -apple-system, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-botanical: var(--botanical);
@@ -42,11 +43,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  body, h1, h2, h3, h4, h5, h6, button, a, p, span, input, select, textarea {
+    font-family: 'Cabinet Grotesk', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
   body {
     background: #F2EAE0;
     color: #111827;
     overflow-x: hidden;
-    font-family: var(--font-sans);
   }
 
   ::selection {
