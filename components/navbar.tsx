@@ -55,11 +55,11 @@ export function Navbar() {
             alt="Flinck"
             width={34}
             height={34}
-            className="h-8 w-8 rounded-lg object-contain transition-transform group-hover:scale-105"
+            className="h-10 w-10 rounded-lg object-contain transition-transform group-hover:scale-105"
             priority
           />
-          <span className="text-lg font-extrabold tracking-tight text-[#1E4A38]">
-            FLINCK
+          <span className="text-xl font-bold tracking-tight text-[#1E4A38] font-['Cabinet_Grotesk',sans-serif]">
+            flinck
           </span>
         </Link>
 
