@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { PLAY_STORE_URL } from "@/lib/site-content";
 
 function GooglePlayIcon({ className = "h-5 w-5" }: { className?: string }) {
@@ -36,25 +36,29 @@ function GooglePlayIcon({ className = "h-5 w-5" }: { className?: string }) {
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-32 pb-16 sm:pt-36 sm:pb-20 bg-[#F2EAE0]">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         {/* Main Headings */}
         <div className="mx-auto max-w-4xl text-center">
           <motion.h1
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[3.2rem] font-black leading-[1.03] tracking-tight text-gray-950 sm:text-7xl lg:text-[5.5rem]"
+            className="text-[2.95rem] xs:text-4xl sm:text-6xl lg:text-[5.4rem] font-extrabold leading-[1.1] tracking-tight text-gray-950"
           >
-            Sell Farm Products.
+            <span className="whitespace-nowrap inline-block">
+              Sell Farm Products
+            </span>
             <br />
-            <span className="text-[#1E4A38]">In Minutes.</span>
+            <span className="text-[#1E4A38] whitespace-nowrap inline-block">
+              In Minutes.
+            </span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#405249] sm:text-lg sm:leading-8 font-medium"
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-[#405249] sm:text-lg sm:leading-8 font-normal"
           >
             The first social marketplace connecting farmers, buyers, and
             agribusinesses into one trusted ecosystem.
@@ -74,10 +78,13 @@ export function HeroSection() {
               href={PLAY_STORE_URL}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-[#1E4A38] px-7 text-sm font-bold text-white shadow-sm transition hover:bg-[#16372A]"
+              className="inline-flex h-12 w-full sm:w-auto items-center justify-center gap-3 rounded-full bg-[#1E4A38] px-6 text-white shadow-md transition hover:bg-[#16372A]"
             >
-              Download App
+              <span className="text-sm font-bold tracking-tight text-white mt-0.5">
+                Download Now
+              </span>
               <GooglePlayIcon className="h-5 w-5 shrink-0" />
+              <div className="flex flex-col items-start leading-none text-left"></div>
             </motion.a>
           </motion.div>
         </div>
@@ -87,7 +94,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto mt-12 max-w-6xl"
+          className="relative mx-auto mt-12 max-w-5xl"
         >
           {/* Floating Pill: Join 200+ users */}
           <motion.div
