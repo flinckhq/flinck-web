@@ -165,16 +165,6 @@ export function FooterSection() {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <a
-                  href={PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-white transition font-bold text-[#F2EAE0]"
-                >
-                  Google Play Store ↗
-                </a>
-              </li>
             </ul>
           </div>
         </div>
