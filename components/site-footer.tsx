@@ -40,7 +40,7 @@ export function SiteFooter() {
                   rel="noreferrer"
                   className="text-slate-600 hover:text-slate-950"
                 >
-                  Google Play
+                  Download
                 </a>
               </li>
             </ul>

@@ -115,7 +115,7 @@ export function HeroSection() {
               </span>
             </div>
             <span className="text-xs font-bold text-[#1E4A38] pr-1">
-              Join 200+ users
+              Join thousands of farmers
             </span>
           </motion.div>
 
