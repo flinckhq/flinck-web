@@ -1,82 +1,48 @@
+"use client";
+
 import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
-import { Metrics } from "@/components/metrics";
-import { FeatureSection } from "@/components/feature-section";
-import { WhyFlinck } from "@/components/why-flinck";
-import { ProductEcosystem } from "@/components/product-ecosystem";
-import { TestimonialCarousel } from "@/components/testimonial-carousel";
-import { CTA } from "@/components/cta";
-import { FAQ } from "@/components/faq";
-import { Footer } from "@/components/footer";
+import { HeroSection } from "@/components/hero-section";
+import { StatsStrip } from "@/components/stats-strip";
+import { HowItWorksSection } from "@/components/how-it-works-section";
+import { BentoGrid } from "@/components/bento-grid";
+import { EcosystemSection } from "@/components/ecosystem-section";
+import { TestimonialsCarousel } from "@/components/testimonials-carousel";
+import { CtaSection } from "@/components/cta-section";
+import { FaqAccordion } from "@/components/faq-accordion";
+import { FooterSection } from "@/components/footer-section";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f7f2e8]">
+    <main className="min-h-screen bg-[#F2EAE0] text-gray-950 selection:bg-[#1E4A38] selection:text-[#F2EAE0]">
+      {/* Navigation Header */}
       <Navbar />
 
-      <Hero />
+      {/* Hero Section */}
+      <HeroSection />
 
-      <Metrics />
+      {/* 8000+ Products / 5+ Community Stats Strip */}
+      <StatsStrip />
 
-      <FeatureSection
-        id="marketplace"
-        eyebrow="Marketplace"
-        title="Buy and sell. Directly."
-        description="List your harvest, set your price, and connect with verified buyers — no middlemen, no friction."
-        imageSrc="/hero-mockup.png"
-        imageAlt="Flinck Marketplace"
-        ctaText="Explore Marketplace"
-        ctaHref="/how-it-works"
-      />
+      {/* How Flinck works - Interactive Tabs & S-Curve */}
+      <HowItWorksSection />
 
-      <FeatureSection
-        id="features"
-        eyebrow="Weather Intelligence"
-        title="Know before you grow."
-        description="Hyper-local weather forecasts and crop guidance that help you plan planting, irrigation, and harvest with confidence."
-        imageSrc="/marketplace-vibe.png"
-        imageAlt="Flinck Weather Intelligence"
-        reversed
-        bgColor="bg-[#f5f0e5]"
-        ctaText="See Weather Features"
-        ctaHref="/how-it-works"
-      />
+      {/* Bento Grid: Weather, Marketplace, AI Assistant, Community */}
+      <BentoGrid />
 
-      <FeatureSection
-        id="ai"
-        eyebrow="AI Assistant"
-        title="Farming, supercharged."
-        description="Get instant answers on pest control, soil health, market prices, and best practices — powered by AI trained for agriculture."
-        imageSrc="/platform-dashboard.png"
-        imageAlt="Flinck AI Assistant"
-        ctaText="Meet Your AI Assistant"
-        ctaHref="/how-it-works"
-      />
+      {/* The Flinck Ecosystem 6-card Grid */}
+      <EcosystemSection />
 
-      <FeatureSection
-        id="community"
-        eyebrow="Community"
-        title="Where farmers connect."
-        description="Follow, share, and learn from a network of farmers, buyers, and agribusinesses — built for agriculture, not generic social media."
-        imageSrc="/farmer-lifestyle.png"
-        imageAlt="Flinck Community"
-        reversed
-        bgColor="bg-[#f7f2e8]"
-        ctaText="Join the Community"
-        ctaHref="/how-it-works"
-      />
+      {/* Testimonials Carousel */}
+      <TestimonialsCarousel />
 
-      <WhyFlinck />
+      {/* Start farming. For free. CTA */}
+      <CtaSection />
 
-      <ProductEcosystem />
+      {/* Frequently Asked Questions */}
+      <FaqAccordion />
 
-      <TestimonialCarousel />
-
-      <CTA />
-
-      <FAQ />
-
-      <Footer />
+      {/* Brand Footer with Giant Watermark */}
+      <FooterSection />
     </main>
   );
 }
