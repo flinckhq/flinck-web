@@ -16,7 +16,7 @@ import {
   BellRing,
 } from "lucide-react";
 
-export const SITE_URL = "https://getflinck.pro";
+export const SITE_URL = "https://flinck.app";
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.k09dtechnologies.flink";
 export const SUPPORT_EMAIL = "hello@flinck.app";
