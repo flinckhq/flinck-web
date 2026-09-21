@@ -57,10 +57,10 @@ export const metadata: Metadata = {
     siteName: "Flinck",
     images: [
       {
-        url: "/flinck-og-image.png",
+        url: "https://flinck.app/flinck-og-image.png",
         width: 1200,
         height: 630,
-        alt: "Flinck Agricultural Social Network for Farmers",
+        alt: "Flinck – Agricultural Social Marketplace for Farmers and Buyers",
       },
     ],
     locale: "en_US",
@@ -72,7 +72,9 @@ export const metadata: Metadata = {
       "Flinck – The Agricultural Social Marketplace to Buy & Sell Farm Produce",
     description:
       "Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly.",
-    images: ["/flinck-og-image.png"],
+    images: ["https://flinck.app/flinck-og-image.png"],
+    site: "@flinckapp",
+    creator: "@flinckapp",
   },
   robots: {
     index: true,
@@ -166,6 +168,43 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&display=swap"
+        />
+        {/* Explicit OG/Twitter meta tags — ensures crawlers (Twitterbot, Facebookbot) always find them in raw HTML */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Flinck" />
+        <meta property="og:url" content="https://flinck.app" />
+        <meta
+          property="og:title"
+          content="Flinck – Agricultural Social Marketplace to Buy & Sell Farm Produce"
+        />
+        <meta
+          property="og:description"
+          content="Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly. Zero middleman fees."
+        />
+        <meta
+          property="og:image"
+          content="https://flinck.app/flinck-og-image.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="Flinck – Agricultural Social Marketplace for Farmers and Buyers"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@flinckapp" />
+        <meta name="twitter:creator" content="@flinckapp" />
+        <meta
+          name="twitter:title"
+          content="Flinck – Agricultural Social Marketplace to Buy & Sell Farm Produce"
+        />
+        <meta
+          name="twitter:description"
+          content="Flinck is the leading agricultural social marketplace where farmers sell farm produce online and buyers procure directly."
+        />
+        <meta
+          name="twitter:image"
+          content="https://flinck.app/flinck-og-image.png"
         />
       </head>
       <body className="font-sans antialiased">
